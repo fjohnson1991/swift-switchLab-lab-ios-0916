@@ -23,7 +23,14 @@ let b = 32
 ### **(1)** Print "true" if a modulo b is equal to zero.
 */
 
-
+switch b == 0 {
+    
+case true:
+    print("true")
+    
+default:
+    print("false")
+}
 
 
 
@@ -33,7 +40,14 @@ let b = 32
 /*: Question 2
 ### **(2)** Print 'true' if y divided by x is greater than three, otherwise print 'false'.
 */
-
+switch y/Int(x) > 3 {
+    
+case true:
+    print("true")
+    
+default:
+    print("false")
+}
 
 
 
@@ -45,7 +59,14 @@ let b = 32
 */
 
 
-
+switch y>Int(x) && a/b > 9 {
+    
+case true:
+    print("true")
+    
+default:
+    print("false")
+}
 
 
 
@@ -54,13 +75,28 @@ let b = 32
 /*: Question 4
 ### **(4)** Write a function named `isGreater` that takes two `Int` arguments and returns a `String`. This function should look to see if `a` is greater than `b`. If it is, it returns back the `String` 'yep', else it returns back the `String` 'nope`.
 */
+func isGreater(a:Int, b:Int) -> String {
+    
+    var result = ""
+    
+    switch a > b {
+        
+    case true:
+        result = "yep"
+        
+    default:
+        result = "nope"
+        
+    }
+   
+    return result
+}
 
 
 
+isGreater(12, b: 1)
 
-
-
-
+isGreater(1, b: 12)
 
 
 /*: Question 5
@@ -73,7 +109,41 @@ let b = 32
 */
 
 
+func isForceWith(a: String) -> Bool {
+    
+    var result = true
+    
+    switch a {
+        
+        case "Luke":
+        return result
+        
+        case "Leia":
+        return result
+        
+        case "Anakin":
+        return result
+        
+        case "Obi":
+        return result
+        
+        case "Yoda":
+        return result
+        
+        case "Vader":
+        return result
+        
+    default:
+        result = false
+        
+        
+    }
+    
+    return result
+}
 
+isForceWith("Luke")
+isForceWith("Mary")
 
 
 
@@ -89,10 +159,27 @@ let b = 32
 */
 
 
+func isInRange(a:Int) {
+    
+    switch a {
+        
+    case 0...3:
+        print("small")
+        
+    case 4...6:
+        print("medium")
+    case 7...10:
+        print("big")
+    
+    default:
+        print("not sure")
+    
+    }
+}
 
-
-
-
+isInRange(0)
+isInRange(99)
+isInRange(5)
 
 
 //: Checkout the solution branch for answers to the above questions.
